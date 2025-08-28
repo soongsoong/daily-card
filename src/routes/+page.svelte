@@ -9,18 +9,22 @@
         'smile': { src: SmilingEmoji, alt:"smiling emoji" }
     };
 
+    type ImgKey = keyof typeof ImgDef;
 
-    $: img = page.url.searchParams.get('img') || ''
-    $: name = page.url.searchParams.get('name') || ''
-    
-    $: imgKey = (img in ImgDef) ? img as keyof typeof ImgDef : 'default'
+    let img = $state<ImgKey>('default');
+    let name = $state('');
+
+    $effect(() => {
+        const imgParam = page.url.searchParams.get('img')||'';
+        img = (imgParam in ImgDef) ? imgParam as ImgKey : 'default';
+        name = page.url.searchParams.get('name') || '';
+    });
+
 </script>
 
 <div class="wrap">
     <div class="card">
-        {#if imgKey}
-            <img src={ImgDef[imgKey].src} alt={ImgDef[imgKey].alt} />
-        {/if}
+        <img src={ImgDef[img].src} alt={ImgDef[img].alt} />
         <div>
             <p>Welcome, {name}.</p>
             <p>testing....</p>
@@ -33,7 +37,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
         width: 100%;
     }
 
