@@ -4,4 +4,4 @@
     $: name = page.url.searchParams.get('name') || ''
 </script>
 
-<h1>Welcome, {name}</h1>
+<h1>Welcome, {name}.</h1>
