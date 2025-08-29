@@ -37,8 +37,6 @@
             }, 2000);
         }
     }
-
-    console.log(page.url);
 </script>
 
 <div class="wrap">
@@ -101,7 +99,7 @@
                 <iframe
                     title="daily-card"
                     id="previewIframe"
-                    src="{page.url.origin}/?img={widgetConfig.img}&name={widgetConfig.name}"
+                    src="{page.url.hostname === 'localhost' ? page.url.origin : 'https://soongsoong.github.io/daily-card'}/?img={widgetConfig.img}&name={widgetConfig.name}"
                     width="{widgetConfig.width}"
                     height="{widgetConfig.height}"
                     style="border: none; overflow: hidden;"
