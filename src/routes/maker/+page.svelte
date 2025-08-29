@@ -37,6 +37,8 @@
             }, 2000);
         }
     }
+
+    console.log(page.url);
 </script>
 
 <div class="wrap">
