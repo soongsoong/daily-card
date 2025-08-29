@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { ImgKey } from '$lib/DailyCard/constant';
     import { ImgDef } from '$lib/DailyCard/constant';
+    import { page } from '$app/state';
 
     // 위젯 설정 상태
     let widgetConfig = $state({
@@ -98,7 +99,7 @@
                 <iframe
                     title="daily-card"
                     id="previewIframe"
-                    src="/?img={widgetConfig.img}&name={widgetConfig.name}"
+                    src="{page.url.origin}/?img={widgetConfig.img}&name={widgetConfig.name}"
                     width="{widgetConfig.width}"
                     height="{widgetConfig.height}"
                     style="border: none; overflow: hidden;"
