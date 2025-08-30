@@ -8,4 +8,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<style>
+	:global(body) {
+		overflow: hidden;
+	}
+</style>
+
 {@render children?.()}
