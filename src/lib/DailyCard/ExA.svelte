@@ -15,10 +15,6 @@
 
 <style>
     .card {
-        background: white;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
         overflow: hidden;
         aspect-ratio: 1/1.4;
     }

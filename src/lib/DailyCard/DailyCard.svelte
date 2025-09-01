@@ -3,6 +3,7 @@
     import ExB from './ExB.svelte';
     import ExC from './ExC.svelte';
     import ExD from './ExD.svelte';
+    import TodosA from './TodosA.svelte';
 </script>
 
 <svelte:head>
@@ -15,8 +16,7 @@
 <div class="cards">
     <ExA name="박병철" />
     <ExB name="박병철" />
-    <div class="card">
-    </div>
+    <TodosA />
     <ExC name="박병철" />
     <ExD name="박병철" />
     <div class="card">
@@ -45,6 +45,11 @@
 
     :global(.card) {
         font-family: 'Galmuri11', sans-serif;
+        background: white;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        box-sizing: border-box;
     }
 
     /* 모바일 반응형 스타일 */
@@ -55,7 +60,7 @@
             max-width: 100%;
         }
 
-        .cards > :nth-child(3) {
+        :global(.todos) {
             grid-column: 1 / -1;
         }
 
