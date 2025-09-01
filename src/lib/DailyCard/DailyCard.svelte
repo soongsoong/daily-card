@@ -1,9 +1,7 @@
 <script lang="ts">
-    import ExA from './ExA.svelte';
-    import ExB from './ExB.svelte';
-    import ExC from './ExC.svelte';
-    import ExD from './ExD.svelte';
-    import TodosA from './TodosA.svelte';
+    import ProfileB from './ProfileB.svelte';
+    import PlayerA from './PlayerA.svelte';
+    import TodoA from './TodoA.svelte';
 </script>
 
 <svelte:head>
@@ -14,13 +12,9 @@
 </svelte:head>
 
 <div class="cards">
-    <ExA name="박병철" />
-    <ExB name="박병철" />
-    <TodosA />
-    <ExC name="박병철" />
-    <ExD name="박병철" />
-    <div class="card">
-    </div>
+    <ProfileB name="박병철" />
+    <PlayerA />
+    <TodoA />
 </div>
 
 <style>
@@ -35,14 +29,6 @@
         padding: 10px;
     }
 
-    .card {
-        background: white;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        overflow: hidden;
-    }
-
     :global(.card) {
         font-family: 'Galmuri11', sans-serif;
         background: white;
@@ -50,21 +36,18 @@
         height: 100%;
         border-radius: 15px;
         box-sizing: border-box;
+        /* border: 1px solid rgb(219, 219, 219); */
     }
 
     /* 모바일 반응형 스타일 */
     @media (max-width: 768px) {
         .cards {
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             max-width: 100%;
         }
 
         :global(.todos) {
-            grid-column: 1 / -1;
-        }
-
-        .cards > :nth-child(6) {
             grid-column: 1 / -1;
         }
     }

@@ -3,9 +3,11 @@
 </script>
 
 <div class="card todos">
+    <h1>To Do</h1>
     {#each todos as todo}
         <div class="todo">
             <p>{todo.text}</p>
+            <p style="background:{(todo.status==="완료" ? "rgb(198 239 198)" : "rgb(249 196 196)")}">{todo.status}</p>
         </div>
     {/each}
 </div>
@@ -29,8 +31,17 @@
         background-color: #fafafa;
         border: 1px solid rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        padding: 12px 14px;
+        padding: 10px 14px;
         transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease, border-color 150ms ease;
+        display: flex;
+        align-items: center;
+    }
+
+    .todo > p:last-child {
+        margin-left: auto;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 7px;
     }
 
     .todo:hover {
@@ -45,5 +56,10 @@
         color: #222222;
         font-size: 0.95rem;
         line-height: 1.5;
+    }
+
+    h1 {
+        margin: 5px 10px 10px;
+        font-size: 22px;
     }
 </style>

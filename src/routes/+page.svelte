@@ -21,6 +21,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #dadadc;
+        background: #ececec;
     }
 </style>

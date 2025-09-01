@@ -7,12 +7,12 @@ export const ImgDef = {
     'smile': { src: SmilingEmoji, alt: "smiling emoji", label: "웃는 이모지" }
 };
 
-export const ProfileImage = "https://mblogthumb-phinf.pstatic.net/MjAxOTA0MjJfMTQw/MDAxNTU1OTIzNzQyMzM1.7ykRPNOiY1KAKJdjmT3entD-oO3B11Meac3NkzvNwrEg.asbbsirs8onxiLo9Xhk0PpNSid1b4JjQgzhRas0OkrYg.JPEG.kyj4022/SE-51aee90f-4829-4d97-90de-d2372f671102.jpg?type=w800";
+export const ProfileImage = "https://lh3.googleusercontent.com/pw/AP1GczOX4IppNi3giikNZeudvpe4Q9FA3N-tYWfwuL7TckupB-wZAL1Xm9PI6KRSMZqxL5LvOzQx8QwizA3LM1_Jju8aEpcxGXDfTSm9kQoH3_I_FGR_WIt4mjD3lEui-xTtTJK7y5j307NmqGoe4C6aEeuV=w317-h409-s-no-gm?authuser=0";
 
 export const todos = [
-    {text: "ukulele", checked:true},
-    {text: "lank up", checked:true},
-    {text: "diary", checked:false},
+    {text: "ukulele", status:"완료"},
+    {text: "lank up", status:"완료"},
+    {text: "diary", status:"미완료"},
 ];
 
 export type ImgKey = keyof typeof ImgDef;
