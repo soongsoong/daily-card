@@ -12,14 +12,15 @@
     let name = $derived(page.url.searchParams.get('name') || '');
 </script>
 
-<div class="wrap">
-    <DailyCard img={img} name={name} />
-</div>
+
+<DailyCard img={img} name={name} />
+
 
 <style>
-    .wrap {
+    :global(body) {
         display: flex;
         align-items: center;
         justify-content: center;
+        background: #dadadc;
     }
 </style>
