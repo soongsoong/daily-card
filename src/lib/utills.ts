@@ -1,0 +1,1 @@
+export const paramToNumber = (value : any) => !value || isNaN(Number(value)) ? 0 : value;
