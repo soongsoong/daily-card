@@ -1,20 +1,17 @@
 <script lang="ts">
     import ProfileB from './ProfileB.svelte';
-    import PlayerA from './PlayerA.svelte';
-    import TodoA from './TodoA.svelte';
+    import PlayerB from './PlayerB.svelte';
+    import TodoB from './TodoB.svelte';
 </script>
 
 <svelte:head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
 </svelte:head>
 
 <div class="cards">
-    <ProfileB name="박병철" />
-    <PlayerA />
-    <TodoA />
+    <ProfileB />
+    <PlayerB />
+    <TodoB />
 </div>
 
 <style>
@@ -22,11 +19,13 @@
         flex: 1 1 0;
         max-width: 700px;
         display: grid;
-        grid-template-columns: 3fr 3fr 4fr;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: 4fr 6fr;
         column-gap: 15px;
         row-gap: 15px;
         align-items: center;
         padding: 10px;
+        aspect-ratio: 2.5/1;
     }
 
     :global(.card) {
@@ -37,6 +36,21 @@
         border-radius: 15px;
         box-sizing: border-box;
         /* border: 1px solid rgb(219, 219, 219); */
+    }
+
+    :global(.profile) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    :global(.player) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    :global(.todos) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
     }
 
     /* 모바일 반응형 스타일 */

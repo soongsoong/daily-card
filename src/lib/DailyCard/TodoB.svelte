@@ -1,11 +1,13 @@
 <script lang="ts">
     import { todos } from './constant';
+    import SunnyIcon from '$lib/assets/sunny_1.svg';
 </script>
 
 <div class="card todos">
-    <h1>To Do</h1>
+<!--    <h1>To Do</h1>-->
     {#each todos as todo}
         <div class="todo">
+            <img src={SunnyIcon} alt="sunny icon" />
             <p>{todo.text}</p>
             <p style="background:{(todo.status==='완료' ? 'rgb(198 239 198)' : 'rgb(249 196 196)')}">{todo.status}</p>
         </div>
@@ -13,28 +15,29 @@
 </div>
 
 <style>
-    .card {
-        /* background-color: #ffffff;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 12px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.06); */
-    }
-
     .todos {
-        padding: 16px;
+        padding: 15px 25px;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        justify-content: center;
     }
 
     .todo {
-        background-color: #fafafa;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
-        padding: 10px 14px;
         transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease, border-color 150ms ease;
         display: flex;
         align-items: center;
+        padding: 7px;
+        border-radius: 10px;
+    }
+
+    .todo > img {
+        box-sizing: border-box;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .todo > p:first-child {
+        font-size: 14px;
     }
 
     .todo > p:last-child {
@@ -59,7 +62,7 @@
     }
 
     h1 {
-        margin: 5px 10px 10px;
-        font-size: 22px;
+        margin: 0 0 5px;
+        font-size: 18px;
     }
 </style>

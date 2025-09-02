@@ -1,13 +1,9 @@
 <script lang="ts">
     import { ProfileImage } from './constant';
     import SunnyIcon from '$lib/assets/sunny_2.svg';
-
-    let { name = "박병철" } = $props<{
-        name?: string;
-    }>();
 </script>
 
-<div class="card profile2">
+<div class="card profile">
     <button>
         09/01
     </button>
@@ -22,26 +18,26 @@
 <style>
     .card {
         overflow: hidden;
-        aspect-ratio: 1/1.3;
+        /*aspect-ratio: 1/1.3;*/
     }
 
-    .profile2 {
+    .profile {
         position: relative;
     }
 
-    .profile2 > * {
+    .profile > * {
         position: absolute;
         box-sizing: border-box;
     }
 
-    .profile2 > img {
+    .profile > img {
         z-index: 5;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .profile2 > .tokens {
+    .profile > .tokens {
         bottom: 12px;
         right: 12px;
         z-index: 10;
@@ -66,7 +62,7 @@
         font-weight: 500;
     }
 
-    .profile2 > button {
+    .profile > button {
         top: 10px;
         left: 10px;
         z-index: 10;

@@ -7,7 +7,7 @@ export const ImgDef = {
     'smile': { src: SmilingEmoji, alt: "smiling emoji", label: "웃는 이모지" }
 };
 
-export const ProfileImage = "https://lh3.googleusercontent.com/pw/AP1GczOX4IppNi3giikNZeudvpe4Q9FA3N-tYWfwuL7TckupB-wZAL1Xm9PI6KRSMZqxL5LvOzQx8QwizA3LM1_Jju8aEpcxGXDfTSm9kQoH3_I_FGR_WIt4mjD3lEui-xTtTJK7y5j307NmqGoe4C6aEeuV=w317-h409-s-no-gm?authuser=0";
+export const ProfileImage = "https://images.stockcake.com/public/2/d/8/2d81ce52-116c-47ca-9e41-66514c56de6c_large/sunset-city-view-stockcake.jpg";
 
 export const todos = [
     {text: "ukulele", status:"완료"},
