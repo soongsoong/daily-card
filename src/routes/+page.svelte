@@ -29,15 +29,16 @@
         `<iframe` +
         `   title="profile"` +
         `   src=${profileUrl}` +
-        `   style="aspect-ratio: 0.7/1"` +
+        `   style="aspect-ratio: 0.7/1; height: 100%;"` +
         `></iframe>`
     );
 
     let playerDef = $state({
-        title: '거울',
-        artist: '한로로',
+        title: '제목',
+        artist: '가수',
         src: 'https://i.pinimg.com/736x/c0/74/9b/c0749b7cc401421662ae901ec8f9f660.jpg',
-        alt: 'profile'
+        alt: 'cover_image',
+        url: ''
     });
 
     let playerUrl = $derived.by(() => {
@@ -49,7 +50,8 @@
             `/?title=${playerDef.title}` +
             `&artist=${playerDef.artist}` +
             `&src=${playerDef.src}` +
-            `&alt=${playerDef.alt}`;
+            `&alt=${playerDef.alt}` +
+            `&url=${playerDef.url}`;
 
         return origin + '/player' + searchParams;
     });
@@ -58,128 +60,149 @@
         `<iframe` +
         `   title="profile"` +
         `   src=${playerUrl}` +
-        `   style="aspect-ratio: 0.7/1"` +
+        `   style="aspect-ratio: 1/0.3; height: 40%;"` +
         `></iframe>`
     );
 </script>
 
 <div class="wrap">
     <div class="row">
-        <div class="options">
-            <div class="option">
-                <label for="date-input">제목</label>
-                <input
-                    id="date-input"
-                    type="text"
-                    bind:value={profileDef.date}
-                />
+        <div class="setting">
+            <div class="options">
+                <div class="option">
+                    <label for="date-input">제목</label>
+                    <input
+                        id="date-input"
+                        type="text"
+                        bind:value={profileDef.date}
+                    />
+                </div>
+                <div class="option">
+                    <label for="weather-select">날씨</label>
+                    <select id="weather-select" bind:value={profileDef.weather}>
+                        {#each weathers as x, idx}
+                            <option value={idx}>{x.alt}</option>
+                        {/each}
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="state-select">상태</label>
+                    <select id="state-select" bind:value={profileDef.state}>
+                        {#each states as x, idx}
+                            <option value={idx}>{x.label}</option>
+                        {/each}
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="src-input">배경이미지</label>
+                    <input
+                        id="src-input"
+                        type="text"
+                        bind:value={profileDef.src}
+                    />
+                </div>
+                <div class="option">
+                    <label for="alt-input">배경설명</label>
+                    <input
+                        id="alt-input"
+                        type="text"
+                        bind:value={profileDef.alt}
+                    />
+                </div>
             </div>
-            <div class="option">
-                <label for="weather-select">날씨</label>
-                <select id="weather-select" bind:value={profileDef.weather}>
-                    {#each weathers as x, idx}
-                        <option value={idx}>{x.alt}</option>
-                    {/each}
-                </select>
-            </div>
-            <div class="option">
-                <label for="state-select">상태</label>
-                <select id="state-select" bind:value={profileDef.state}>
-                    {#each states as x, idx}
-                        <option value={idx}>{x.label}</option>
-                    {/each}
-                </select>
-            </div>
-            <div class="option">
-                <label for="src-input">배경이미지</label>
-                <input
-                    id="src-input"
-                    type="text"
-                    bind:value={profileDef.src}
-                />
-            </div>
-            <div class="option">
-                <label for="alt-input">배경설명</label>
-                <input
-                    id="alt-input"
-                    type="text"
-                    bind:value={profileDef.alt}
-                />
+            <div class="code">
+                <pre><code>{profileCode}</code></pre>
             </div>
         </div>
         <div class="preview">
             {@html profileCode}
         </div>
-        <div class="code">
-            <pre><code>{profileCode}</code></pre>
-        </div>
     </div>
     <div class="row">
-        <div class="options">
-            <div class="option">
-                <label for="title-input">제목</label>
-                <input
-                        id="title-input"
+        <div class="setting">
+            <div class="options">
+                <div class="option">
+                    <label for="title-input">제목</label>
+                    <input
+                            id="title-input"
+                            type="text"
+                            bind:value={playerDef.title}
+                    />
+                </div>
+                <div class="option">
+                    <label for="artist-input">아티스트</label>
+                    <input
+                            id="artist-input"
+                            type="text"
+                            bind:value={playerDef.artist}
+                    />
+                </div>
+                <div class="option">
+                    <label for="src-input">배경이미지</label>
+                    <input
+                            id="src-input"
+                            type="text"
+                            bind:value={playerDef.src}
+                    />
+                </div>
+                <div class="option">
+                    <label for="alt-input">배경설명</label>
+                    <input
+                            id="alt-input"
+                            type="text"
+                            bind:value={playerDef.alt}
+                    />
+                </div>
+                <div class="option">
+                    <label for="url-input">링크</label>
+                    <input
+                        id="url-input"
                         type="text"
-                        bind:value={playerDef.title}
-                />
+                        bind:value={playerDef.url}
+                    />
+                </div>
             </div>
-            <div class="option">
-                <label for="artist-input">아티스트</label>
-                <input
-                        id="artist-input"
-                        type="text"
-                        bind:value={playerDef.artist}
-                />
-            </div>
-            <div class="option">
-                <label for="src-input">배경이미지</label>
-                <input
-                        id="src-input"
-                        type="text"
-                        bind:value={playerDef.src}
-                />
-            </div>
-            <div class="option">
-                <label for="alt-input">배경설명</label>
-                <input
-                        id="alt-input"
-                        type="text"
-                        bind:value={playerDef.alt}
-                />
+            <div class="code">
+                <pre><code>{playerCode}</code></pre>
             </div>
         </div>
         <div class="preview">
             {@html playerCode}
         </div>
-        <div class="code">
-            <pre><code>{playerCode}</code></pre>
-        </div>
     </div>
 </div>
 
 <style>
+    .wrap {
+        max-width: 700px;
+        margin: auto;
+    }
+
     .row {
         display: flex;
-        justify-content: center;
         gap: 15px;
         width: 100%;
         padding: 20px;
         overflow: hidden;
         box-sizing: border-box;
+        flex-direction: column;
     }
 
-    .row > div {
-        border: 1px solid #e1e5e9;
-        border-radius: 15px;
-        padding: 25px;
+    .setting {
+        display: flex;
+        gap: 15px;
+        max-height: 300px;
     }
 
     .options {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        min-width: 300px;
+        padding: 25px;
+        width: 50%;
+        border: 1px solid #e1e5e9;
+        border-radius: 15px;
+        overflow: scroll;
     }
 
     .option > label {
@@ -199,9 +222,25 @@
         box-sizing: border-box;
     }
 
+    .preview {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #e1e5e9;
+        border-radius: 15px;
+        height: 300px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .code {
         background: #2d3748;
-        padding: 20px;
+        padding: 10px;
+        overflow-y: scroll;
+        border: 1px solid #e1e5e9;
+        border-radius: 15px;
+        overflow: scroll;
+        width: 50%;
     }
 
     .code pre {
@@ -211,5 +250,9 @@
         line-height: 1.5;
         white-space: pre-wrap;
         word-break: break-all;
+    }
+
+    *::-webkit-scrollbar {
+	    width: 0px;
     }
 </style>

@@ -16,12 +16,9 @@
 		width: 100%;
 		margin: 0;
 		display: flex;
-		height: 100%;
-		overflow: hidden;
 	}
 
 	:global(iframe) {
-		width: 100%;
 		border: none;
 	}
 
@@ -34,5 +31,9 @@
 		box-sizing: border-box;
 		border: 1px solid rgb(219, 219, 219);
 		overflow: hidden;
+	}
+
+	:global(*) {
+		margin: 0;
 	}
 </style>
