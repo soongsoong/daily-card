@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" />
 </svelte:head>
 
+<style>
+	:global(body) {
+		overflow: hidden;
+	}
+</style>
+
 {@render children?.()}
 
 <style>
