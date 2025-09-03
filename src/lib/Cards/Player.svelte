@@ -19,7 +19,6 @@
         <h2>{title}</h2>
         <p>{artist}</p>
     </div>
-    <img src={PlayIcon} alt="play icon"/> 
 </div>
 
 <style>
