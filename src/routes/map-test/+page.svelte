@@ -2,45 +2,42 @@
 
 </script>
 
+<div class="wrap">
+    <div class="top">
+        <div class="area">
+        </div>
+        <div class="path" id="path-right">
 
-<div class="top">
+        </div>
+        <div class="area">
+        </div>
+    </div>
+
+    <div class="path"></div>
+
+    <div class="banner">
+        <div class="bordered" style:z-index="1000">
+            <div></div>
+        </div>
+        <div class="bordered" style:margin-left="8px">
+            <div></div>
+        </div>
+    </div>
+
+    <div class="path"></div>
+    
     <div class="area">
     </div>
-    <div class="path" id="path-right">
-
-    </div>
-    <div class="area">
-    </div>
 </div>
-
-<div class="path"></div>
-
-<div class="banner">
-    <div class="bordered" style:z-index="1000">
-        <div></div>
-    </div>
-    <div class="bordered" style:margin-left="8px">
-        <div></div>
-    </div>
-</div>
-
-<div class="path"></div>
-
-<div class="area">
-</div>
-
 
 <style>
-    :global(body) {
+    /* :global(body) {
         background: black;
-    }
+    } */
 
     .wrap {
         /* size */
         width: 100%;
-        max-width: 750px;
-        padding: 30px;
-        margin: auto;
         box-sizing: border-box;
 
         /* position */
