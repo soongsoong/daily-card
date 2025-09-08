@@ -2,22 +2,22 @@
     let {code, children} = $props();
 </script>
 
-<div class="row">
+<div class="editor">
     <div>
-        <div class="options pannel">
+        <div class="options panel">
             {@render children()}
         </div>
-        <div class="code pannel">
+        <div class="code panel">
             <pre><code>{code}</code></pre>
         </div>
     </div>
-    <div class="preview pannel">
+    <div class="preview panel">
         {@html code}
     </div>
 </div>
 
 <style>
-    .row {
+    .editor {
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -27,14 +27,14 @@
         box-sizing: border-box;
     }
 
-    .row > div {
+    .editor > div {
         display: flex;
         gap: 15px;
         max-height: 300px;
         width: 100%;
     }
 
-    .pannel {
+    .panel {
         border: 1px solid #e1e5e9;
         padding: 15px;
         border-radius: 15px;

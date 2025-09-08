@@ -29,8 +29,8 @@
     }
 
     .profile > * {
-        position: absolute;
         box-sizing: border-box;
+        position: absolute;
         z-index: 10;
     }
 
@@ -47,10 +47,15 @@
     }
 
     .token {
+        /* size */
         padding: 5px 12px;
+
+        /* position */
         display: flex;
         align-items: center;
         gap: 6px;
+
+        /* etc */
         background: rgb(255 255 255 / 37%);
         backdrop-filter: blur(10px);
         border-radius: 15px;
@@ -63,10 +68,13 @@
     }
 
     #background {
-        z-index: 5;
+        /* size */
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        /* position */
+        z-index: 5;
     }
 
     * {

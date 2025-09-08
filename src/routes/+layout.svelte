@@ -12,6 +12,8 @@
 {@render children?.()}
 
 <style>
+	@import '$lib/global.css';
+	
 	:global(body) {
 		width: 100%;
 		margin: 0;

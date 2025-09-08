@@ -23,41 +23,54 @@
 
 <style>
     .player {
+        /* size */
+        padding: 10px;
+
+        /* position */
         display: flex;
         align-items: center;
-        padding: 10px;
         gap: 15px;
     }
 
     .img-container {
+        /* size */
         aspect-ratio: 1/1;
         overflow: hidden;
-        border-radius: 12px;
-        position: relative;
+
+        /* position */
         height: 100%;
+        position: relative;
+
+        /* etc */
+        border-radius: 12px;
         cursor: pointer;
     }
 
     .img-container > img {
-        position: absolute;
-        object-fit: cover;
+        /* size */
         width: 100%;
         height: 100%;
+        object-fit: cover;
+
+        /* position */
+        position: absolute;
     }
 
-    h2 {
-        font-size: 18px;
+    .desc > h2 {
+        /* size */
         margin-bottom: 5px;
+
+        /* etc */
         font-family: 'Galmuri14', sans-serif;
+        font-size: 18px;
     }
 
     .desc > p {
-        font-size: 11px;
+        /* size */
         margin-left: 2px;
-        color: #434343;
-    }
 
-    .player > img {
-        height: 80%;
+        /* etc */
+        font-size: 11px;
+        color: #434343;
     }
 </style>

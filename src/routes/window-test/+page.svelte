@@ -1,14 +1,14 @@
 <script lang="ts">
     import {draggable} from '$lib/actions.svelte'
+    import { page } from '$app/state';
+
+    const embeded = $derived(page.url.searchParams.get('embeded') || '');
 </script>
 
 <div class="wrap">
-    <div class="game-window">
+    <div class="game-window" style:max-width={embeded === 'true' ? '50%' : '700px'}>
         <div class="header" use:draggable></div>
         <div class="body"></div>
-    </div>
-    <div class="text-window" draggable="true">
-
     </div>
 </div>
 
@@ -21,8 +21,7 @@
 
     .game-window {
         /* size */
-        max-width: 700px;
-        width: 100%;
+        width: 30%;
         /* position */
         position: absolute;
         left: 50%;
