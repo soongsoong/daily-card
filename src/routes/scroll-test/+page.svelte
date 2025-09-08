@@ -37,7 +37,7 @@
         </ul>
         <p>
             결국 샘플 제작 후 생각보다 재미없어 보여서 드랍. <br/>
-            하지만 나의 허송세월은 계속된다.<br/>
+            하지만 허송세월은 계속된다.<br/>
             To be continued...
         </p>
     </div>
@@ -126,8 +126,8 @@
         /* size */
         width: 100%;
         max-width: 800px;
-        min-height: 2000px;
-        padding: 25px;
+        min-height: 1000px;
+        padding: 60px 35px 35px;
         box-sizing: border-box;
 
         /* position */
@@ -136,6 +136,9 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
         /* etc */
         border-radius: 15px;
