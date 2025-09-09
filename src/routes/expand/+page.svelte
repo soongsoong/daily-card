@@ -22,6 +22,10 @@
         title="third"
         src={`${origin}/expand/third`}
     ></iframe>
+
+    <div class="">
+        글글글글
+    </div>
 </div>
 
 <style>
@@ -48,34 +52,46 @@
     }
 
     @keyframes second {
-        from {
-            transform: translate(-50%, -50%);
+        0% {
+            transform: translate(-50%, -50%) scale(1);
         }
-        to {
-            transform: translate(-50%, -30%);
+        30% {
+            transform: translate(-50%, -20%) scale(1.15);
+        }
+        70% {
+            transform: translate(-50%, -35%) scale(1.08);
+        }
+        100% {
+            transform: translate(-50%, -30%) scale(1);
         }
     }
 
     #second {
         /* animation */
-        animation: second ease both;
+        animation: second cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation-timeline: scroll();
-        animation-range: 0vh 40vh;
+        animation-range: 0vh 50vh;
     }
 
     @keyframes third {
-        from {
-            transform: translate(-50%, -50%);
+        0% {
+            transform: translate(-50%, -50%) scale(1);
         }
-        to {
-            transform: translate(-50%, -57%);
+        30% {
+            transform: translate(-50%, -65%) scale(1.15);
+        }
+        70% {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+        100% {
+            transform: translate(-50%, -57%) scale(1);
         }
     }
 
     #third {
         /* animation */
-        animation: third ease both;
+        animation: third cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
         animation-timeline: scroll();
-        animation-range: 0vh 40vh;
+        animation-range: 0vh 50vh;
     }
 </style>
