@@ -2,10 +2,10 @@
     import {page} from "$app/state";
 
     const urls = [
-        {label: "위젯 (빌더)", src:"card-test"},
-        {label: "스크롤 애니메이션", src:"scroll-test"},
-        {label: "윈도우창", src:"window-test"},
-        {label: "맵", src:"map-test"},
+        {label: "위젯 (빌더)", src:"card"},
+        {label: "스크롤 애니메이션", src:"scroll"},
+        {label: "윈도우창", src:"window"},
+        {label: "맵", src:"map"},
     ];
 
     let selected = $state(0);

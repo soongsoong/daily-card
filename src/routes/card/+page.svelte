@@ -15,7 +15,7 @@
             .map(([key, value]) => `${key}=${value}`)
             .join('&');
 
-        return origin + path + '/?' + searchParams;
+        return origin + '/card' + path + '/?' + searchParams;
     }
 
     let profileDef = $state({
