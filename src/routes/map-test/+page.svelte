@@ -2,12 +2,12 @@
     import {page} from "$app/state";
 
     // params
-    const embeded = $derived(page.url.searchParams.get('embeded') || '');
+    const embedded = $derived(page.url.searchParams.get('embedded') || '');
     const src = $derived(page.url.searchParams.get('src') || '');
     const alt = $derived(page.url.searchParams.get('alt') || '');
 </script>
 
-<div class="page-wrap" style:max-width={embeded === 'true' ? '100%' : '800px'}>
+<div class="page-wrap" style:max-width={embedded === 'true' ? '100%' : '800px'}>
     <div>
 
     </div>

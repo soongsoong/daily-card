@@ -3,7 +3,7 @@
     import {weathers, states} from '$lib/Cards/constant';
     import Editor from './Editor.svelte';
 
-    const embeded = $derived(page.url.searchParams.get('embeded') || '');
+    const embedded = $derived(page.url.searchParams.get('embedded') || '');
 
     // URL 생성을 위한 공통 함수
     function createUrl(def: Record<string, any>, path: string): string {
@@ -41,7 +41,7 @@
     let previewCode = $state('');
 </script>
 
-<div class="page-wrap" style:max-width={embeded === 'true' ? '100%' : '700px'}>
+<div class="page-wrap" style:max-width={embedded === 'true' ? '100%' : '700px'}>
     <Editor code={profileCode}>
         <div class="option">
             <label for="date-input">날짜</label>
@@ -155,21 +155,21 @@
         box-sizing: border-box;
     }
 
-    .preview {
-        padding: 20px;
-    }
+    /*.preview {*/
+    /*    padding: 20px;*/
+    /*}*/
 
-    .preview > textarea {
-        width: 100%;
-        height: 100px;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-    }
+    /*.preview > textarea {*/
+    /*    width: 100%;*/
+    /*    height: 100px;*/
+    /*    margin-bottom: 15px;*/
+    /*    box-sizing: border-box;*/
+    /*}*/
 
-    .preview > div {
-        height: 300px;
-        border: 1px solid #e1e5e9;
-    }
+    /*.preview > div {*/
+    /*    height: 300px;*/
+    /*    border: 1px solid #e1e5e9;*/
+    /*}*/
 
     :global(#embeded-profile) {
         aspect-ratio: 0.7/1;

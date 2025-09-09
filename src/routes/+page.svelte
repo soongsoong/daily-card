@@ -16,7 +16,7 @@
             page.url.origin :
             'https://soongsoong.github.io/daily-card';
 
-        url = `${origin}/${urls[selected].src}/?embeded=true`;
+        url = `${origin}/${urls[selected].src}/?embedded=true`;
     });
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/state';
 
-    const embeded = $derived(page.url.searchParams.get('embeded') || '');
+    const embedded = $derived(page.url.searchParams.get('embedded') || '');
 
     const go = () => {
         window.scrollTo({
@@ -11,7 +11,7 @@
     }
 </script>
 
-<div class="page-wrap" style:max-width={embeded === 'true' ? '100%' : '800px'}>
+<div class="page-wrap" style:max-width={embedded === 'true' ? '100%' : '800px'}>
     <div class="header">
         <button onclick={go}>start</button>
     </div>
