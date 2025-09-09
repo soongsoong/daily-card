@@ -46,7 +46,7 @@
 <style>
     .page-wrap {
         width: 100%;
-        min-height: 500vh;
+        min-height: 400vh;
         margin: auto;
         position: relative;
     }
