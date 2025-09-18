@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from '$app/state';
-    import {weathers, states} from '$lib/Cards/constant';
+    import {weathers, states} from '$lib/widget/constant';
     import Editor from './Editor.svelte';
 
     const embedded = $derived(page.url.searchParams.get('embedded') || '');
@@ -15,7 +15,7 @@
             .map(([key, value]) => `${key}=${value}`)
             .join('&');
 
-        return origin + '/card' + path + '/?' + searchParams;
+        return origin + '/widgets' + path + '/?' + searchParams;
     }
 
     let profileDef = $state({
@@ -126,13 +126,6 @@
             />
         </div>
     </Editor>
-
-    <!-- <div class="preview">
-        <textarea bind:value={previewCode}></textarea>
-        <div>
-            {@html previewCode}
-        </div>
-    </div> -->
 </div>
 
 <style>
@@ -154,22 +147,6 @@
         font-size: 1rem;
         box-sizing: border-box;
     }
-
-    /*.preview {*/
-    /*    padding: 20px;*/
-    /*}*/
-
-    /*.preview > textarea {*/
-    /*    width: 100%;*/
-    /*    height: 100px;*/
-    /*    margin-bottom: 15px;*/
-    /*    box-sizing: border-box;*/
-    /*}*/
-
-    /*.preview > div {*/
-    /*    height: 300px;*/
-    /*    border: 1px solid #e1e5e9;*/
-    /*}*/
 
     :global(#embeded-profile) {
         aspect-ratio: 0.7/1;

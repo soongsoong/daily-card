@@ -24,17 +24,6 @@
 		border: none;
 	}
 
-	:global(.card) {
-		width: 100%;
-		height: 100vh;
-		font-family: 'Galmuri11', sans-serif;
-		background: white;
-		border-radius: 15px;
-		box-sizing: border-box;
-		border: 1px solid rgb(219, 219, 219);
-		overflow: hidden;
-	}
-
 	:global(*) {
 		margin: 0;
 	}

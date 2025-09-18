@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {draggable} from '$lib/actions.svelte'
+    import {draggable} from '$lib/actions/draggable.svelte'
     import { page } from '$app/state';
 
     const embeded = $derived(page.url.searchParams.get('embeded') || '');

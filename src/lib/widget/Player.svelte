@@ -10,7 +10,7 @@
     const url = $derived(page.url.searchParams.get('url') || '');
 </script>
 
-<div class="card player">
+<div class="widget player">
     <div class="img-container" onclick={()=>{window.open(url)}}>
         <img src={PlayIcon} alt="play icon" style="z-index:10; opacity:0.5"/>
         <img {src} {alt} />

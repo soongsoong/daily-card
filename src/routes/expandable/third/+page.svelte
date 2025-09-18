@@ -28,12 +28,16 @@
         margin-bottom: 30%;
         box-sizing: border-box;
 
+        /* position */
         position: relative;
     }
 
     h2 {
+        /* position */
         position: absolute;
         top: -24px;
+
+        /* etc */
         font-size: 24px;
         line-height: 24px;
     }

@@ -10,17 +10,17 @@
     <iframe
         id="first"
         title="first"
-        src={`${origin}/expand/first`}
+        src={`${origin}/expandable/first`}
     ></iframe>
     <iframe
         id="second"
         title="second"
-        src={`${origin}/expand/second`}
+        src={`${origin}/expandable/second`}
     ></iframe>
     <iframe
         id="third"
         title="third"
-        src={`${origin}/expand/third`}
+        src={`${origin}/expandable/third`}
     ></iframe>
 
     <div class="">
@@ -56,10 +56,10 @@
             transform: translate(-50%, -50%) scale(1);
         }
         30% {
-            transform: translate(-50%, -20%) scale(1.15);
+            transform: translate(-50%, -50%) scale(1.08);
         }
         70% {
-            transform: translate(-50%, -35%) scale(1.08);
+            transform: translate(-50%, -30%) scale(1.08);
         }
         100% {
             transform: translate(-50%, -30%) scale(1);
@@ -78,10 +78,10 @@
             transform: translate(-50%, -50%) scale(1);
         }
         30% {
-            transform: translate(-50%, -65%) scale(1.15);
+            transform: translate(-50%, -50%) scale(1.08);
         }
         70% {
-            transform: translate(-50%, -50%) scale(1.08);
+            transform: translate(-50%, -57%) scale(1.08);
         }
         100% {
             transform: translate(-50%, -57%) scale(1);

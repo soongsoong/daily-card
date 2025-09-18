@@ -11,7 +11,7 @@
     const alt = $derived(page.url.searchParams.get('alt') || '');
 </script>
 
-<div class="card profile">
+<div class="widget profile">
     <div class="header">
         <div class="token">{date}</div>
         <img src={weathers[weather].src} alt={weathers[weather].alt} />
@@ -75,10 +75,6 @@
 
         /* position */
         z-index: 5;
-    }
-
-    * {
-        margin: 0;
     }
 </style>
 
